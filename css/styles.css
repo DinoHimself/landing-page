@@ -15,10 +15,29 @@ a {
 
 body {
     height: 100vh;
-    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 50px;
+}
+
+button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    width: 88px;
+    height: 24px;
+    border-radius: 5px;
+}
+
+.left-side > button {
+    border: 1px #3882F6 solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-left > button {
+    border: 1px #F9FAF8 solid;
+    margin-top: 5px;
 }
 
 .header,
@@ -30,7 +49,11 @@ body {
 .header-top,
 .header-bottom {
     display: flex;
-    margin: 15px 100px 60px 100px
+    margin: 15px 100px 60px 100px;
+}
+
+.header-bottom {
+    flex-wrap: wrap;
 }
 
 .header-top {
@@ -38,7 +61,7 @@ body {
     align-items: center;
 }
 
-.header-top ul {
+.header-top > ul {
     display: flex;
     gap: 15px;
 }
@@ -49,15 +72,65 @@ body {
     color: #F9FAF8;
 }
 
+.header-bottom .left-side,
+.header-bottom .right-side {
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-radius: 10px;
+    max-height: 20vh;
+}
+
+.header-bottom .right-side {
+    object-fit: cover;
+}
+
 .left-side .title {
     font-size: 48px;
     font-weight: bold;
     color: #F9FAF8;
 }
 
+
 .mid-section {
+    padding: 15px 100px 60px 100px;
+}
+
+.mid-section > p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.boxes {
     display: flex;
-    padding: 15px 100px 60px 100px
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.boxes > .box-1,
+.boxes > .box-2,
+.boxes > .box-3,
+.boxes > .box-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 130px;
+    gap: 5px;
+}
+
+.box-1 > .box-1,
+.box-2 > .box-2,
+.box-3 > .box-3,
+.box-4 > .box-4 {
+    height: 130px;
+    width: 130px;
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+}
+
+.boxes p {
+    text-align: center;
 }
 
 .quote {
@@ -67,7 +140,7 @@ body {
     padding: 60px 200px;
 }
 
-.quote p {
+.quote > p {
     font-style: italic;
 }
 
@@ -75,6 +148,7 @@ body {
     font-style: normal;
     font-weight: bold;
     align-self: flex-end;
+    margin-top: 15px;
 }
 
 .above-footer {
